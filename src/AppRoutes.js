@@ -7,8 +7,7 @@ import DecrementCounter from "./features/counter/DecrementCounter";
 
 
 
-export default (props) => {
-    return (<Switch>
+export default (props) => <Switch>
     <Route exact path="/" component={Home}/>
     <Route exact path="/about" component={About}/>
 
@@ -21,5 +20,5 @@ export default (props) => {
         )}/>
 
 
-</Switch>)};
+</Switch>;
 
