@@ -1,19 +1,28 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import Button from '../../molecules/Button'
+import {decrement} from './CounterActions'
 
-class IncrementCounter extends Component {
+
+class DecrementCounterComponent extends Component{
+    render() {
+
+        return (
+            <React.Fragment>
+                <h1>{this.props.counter}</h1>
+                <Button name="Decrement" onClick={this.props.decrement}/>
+            </React.Fragment>
+        )
+    }
 
 
-render (){
-
-    return (
-        <React.Fragment>
-            <h1>{this.props.counter}</h1>
-            <Button name="Decrement" onClick={this.props.onClick}/>
-
-        </React.Fragment>
-    )
 }
 
-}
-export default IncrementCounter;
+const mapStateToProps = ({counter}) => ({
+    counter
+})
+const mapDispatchToProps = {
+    decrement}
+
+
+export const DecrementCounter = connect(mapStateToProps, mapDispatchToProps)(DecrementCounterComponent)
