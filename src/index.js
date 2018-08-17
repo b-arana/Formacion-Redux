@@ -8,6 +8,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 const store = createStore(modifyCounter)
 
+
 ReactDOM.render(
     <Provider store={store}>
             <App/>
