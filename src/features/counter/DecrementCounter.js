@@ -18,8 +18,8 @@ class DecrementCounterComponent extends Component{
 
 }
 
-const mapStateToProps = ({counter}) => ({
-    counter
+const mapStateToProps = state => ({
+    counter: state
 })
 const mapDispatchToProps = {
     decrement}
