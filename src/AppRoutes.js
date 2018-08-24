@@ -12,11 +12,10 @@ export default (props) => <Switch>
     <Route exact path="/about" component={About}/>
 
     <Route exact path="/incrementCounter" component={IncrementCounter}
-        />
+    />
 
-        <Route exact path="/decrementCounter" component={DecrementCounter}
-        />
+    <Route exact path="/decrementCounter" component={DecrementCounter}
+    />
 
 
 </Switch>;
-
